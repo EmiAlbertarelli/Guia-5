@@ -1,0 +1,35 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n;
+        System.out.println("ingrese el tamaño del vector");
+        n= sc.nextInt();
+        int c5=0;
+        int c4=0;
+        int c3=0;
+        int c2=0;
+        int c1=0;
+       int vector[]=new int[n];
+        for (int i = 0; i < n; i++) {
+            System.out.println("ingrese un valor");
+            vector[i]= sc.nextInt();
+            if (vector[i]>9999) {
+                c5++;
+            } else if (vector[i]>999) {
+                c4++;
+            } else if (vector[i]>99) {
+                c3++;
+            } else if (vector[i]>9) {
+                c2++;
+            } else if (vector[i]>=0) {
+                c1++;
+            }
+        }
+        System.out.println("tenemos "+c5+" numeros de 5 digitos" +
+                "\ntenemos "+c4+" numeros de 4 digitos" +
+                "\ntenemos "+c3+" numeros de 3 digitos" +
+                "\ntenemos "+c2+" numeros de 2 digitos" +
+                "\ntenemos "+c1+" numeros de 1 digitos");
+    }
+}
